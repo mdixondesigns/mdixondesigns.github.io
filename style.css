@@ -1,32 +1,29 @@
-/* merriweather-300 - latin */
+/* martel-300 - latin */
 @font-face {
-  font-display: swap;
-  font-family: 'Merriweather';
+  font-family: 'Martel';
   font-style: normal;
   font-weight: 300;
   src: local(''),
-       url('fonts/merriweather-v28-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('fonts/merriweather-v28-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('fonts/martel-v9-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/martel-v9-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* merriweather-regular - latin */
+/* martel-regular - latin */
 @font-face {
-  font-display: swap;
-  font-family: 'Merriweather';
+  font-family: 'Martel';
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('fonts/merriweather-v28-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('fonts/merriweather-v28-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('fonts/martel-v9-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/martel-v9-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* merriweather-700 - latin */
+/* martel-700 - latin */
 @font-face {
-  font-display: swap;
-  font-family: 'Merriweather';
+  font-family: 'Martel';
   font-style: normal;
   font-weight: 700;
   src: local(''),
-       url('fonts/merriweather-v28-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('fonts/merriweather-v28-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('fonts/martel-v9-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/martel-v9-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* lato-300 - latin */
@@ -63,6 +60,8 @@
 :root {
   --primary-text-color: dodgerblue;
   --standard-text-color: #333;
+  --wide: 600px;
+  --narrow: 400px;
 }
 
 body {
@@ -71,21 +70,36 @@ body {
 
 h1 {
   color: var(--primary-text-color);
-  font-family: "Merriweather";
+  font-family: "Martel";
 }
 
-p {
-  font-size: 1.2em;
+h3 span {
+  font-style: italic;
+  font-weight: normal;
+}
+
+p, li {
+  font-size: 1em;
   line-height: 1.5;
+  max-width: var(--wide);
+}
+
+a,
+a:visited {
+  color: var(--primary-text-color);
 }
 
 img {
   max-width: 100%;
 }
 
+iframe {
+  max-width: var(--wide);
+}
+
 .avatar-container {
   cursor: pointer;
-  max-width: 400px;
+  max-width: var(--narrow);
   position: relative;
 }
 
@@ -118,20 +132,13 @@ ul#social-list {
   display: flex;
   justify-content: center;
   list-style-type: none;
-  max-width: 400px;
+  max-width: var(--narrow);
   padding: 0;
 }
 
 ul#social-list li {
   margin-bottom: 15px;
 }
-
-/* @media only screen and (min-width: 381px) {
-  ul#social-list li {
-    display: inline;
-    margin-right: 30px;
-  }
-} */
 
 ul#social-list li a {
   line-height: 32px;
@@ -158,4 +165,15 @@ ul#social-list li a:focus svg * {
 ul#social-list li svg {
   vertical-align: middle;
   width: 32px;
+}
+
+.vimeo-container {
+  padding:75% 0 0 0;
+  position:relative;
+}
+
+@media only screen and (min-width: 646px) {
+  .vimeo-container {
+    padding-top:460px;
+  }
 }
