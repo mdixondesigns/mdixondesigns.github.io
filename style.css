@@ -1,29 +1,29 @@
-/* martel-300 - latin */
+/* raleway-200 - latin */
 @font-face {
-  font-family: 'Martel';
+  font-family: 'Raleway';
   font-style: normal;
-  font-weight: 300;
+  font-weight: 200;
   src: local(''),
-       url('fonts/martel-v9-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('fonts/martel-v9-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('fonts/raleway-v22-latin-200.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/raleway-v22-latin-200.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* martel-regular - latin */
+/* raleway-regular - latin */
 @font-face {
-  font-family: 'Martel';
+  font-family: 'Raleway';
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('fonts/martel-v9-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('fonts/martel-v9-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('fonts/raleway-v22-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/raleway-v22-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* martel-700 - latin */
+/* raleway-700 - latin */
 @font-face {
-  font-family: 'Martel';
+  font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
   src: local(''),
-       url('fonts/martel-v9-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('fonts/martel-v9-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('fonts/raleway-v22-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/raleway-v22-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* lato-300 - latin */
@@ -59,9 +59,9 @@
 
 :root {
   --primary-text-color: dodgerblue;
-  --standard-text-color: #333;
+  --standard-text-color: #666;
   --wide: 600px;
-  --narrow: 400px;
+  --narrow: 300px;
 }
 
 body {
@@ -70,7 +70,20 @@ body {
 
 h1 {
   color: var(--primary-text-color);
-  font-family: "Martel";
+  font-family: "Raleway", "Trebuchet MS", "Avenir", "Segoe UI", sans‑serif;
+  font-size: 3.2em;
+  font-weight: 200;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Raleway", "Trebuchet MS", "Avenir", "Segoe UI", sans‑serif;
+  font-size: 1.17em;
+}
+
+h3 {
+  font-size: .95em;
+  font-weight: 400;
 }
 
 h3 span {
@@ -78,10 +91,16 @@ h3 span {
   font-weight: normal;
 }
 
-p, li {
+h4 {
   font-size: 1em;
-  line-height: 1.5;
-  max-width: var(--wide);
+  font-weight: normal;
+  margin: 0 0 30px;
+}
+
+p, li {
+  color: var(--standard-text-color);
+  font-size: .95em;
+  line-height: 1.6em;
 }
 
 a,
@@ -93,17 +112,34 @@ img {
   max-width: 100%;
 }
 
-iframe {
+.wrapper {
+  margin: 0 auto;
   max-width: var(--wide);
+  padding: 0 15px;
 }
+
+
 
 .avatar-container {
   cursor: pointer;
+  margin: 15px 0;
   max-width: var(--narrow);
   position: relative;
 }
 
+@media only screen and (min-width: 601px) {
+
+  .section-bio {
+    display: grid;
+    gap: 15px;
+    grid-template-areas: "a a b b b b";
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+}
+
 .avatar-container #avatar {
+  border-radius: 4px;
   transition: filter 1s;
 }
 
@@ -130,9 +166,8 @@ iframe {
 ul#social-list {
   column-gap: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   list-style-type: none;
-  max-width: var(--narrow);
   padding: 0;
 }
 
@@ -165,15 +200,4 @@ ul#social-list li a:focus svg * {
 ul#social-list li svg {
   vertical-align: middle;
   width: 32px;
-}
-
-.vimeo-container {
-  padding:75% 0 0 0;
-  position:relative;
-}
-
-@media only screen and (min-width: 646px) {
-  .vimeo-container {
-    padding-top:460px;
-  }
 }
