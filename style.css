@@ -1,0 +1,161 @@
+/* merriweather-300 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+       url('fonts/merriweather-v28-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/merriweather-v28-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* merriweather-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('fonts/merriweather-v28-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/merriweather-v28-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* merriweather-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('fonts/merriweather-v28-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/merriweather-v28-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* lato-300 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+       url('fonts/lato-v22-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/lato-v22-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* lato-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('fonts/lato-v22-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/lato-v22-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* lato-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('fonts/lato-v22-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/lato-v22-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+:root {
+  --primary-text-color: dodgerblue;
+  --standard-text-color: #333;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  color: var(--primary-text-color);
+  font-family: "Merriweather";
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+.avatar-container {
+  cursor: pointer;
+  max-width: 400px;
+  position: relative;
+}
+
+.avatar-container #avatar {
+  transition: filter 1s;
+}
+
+.avatar-container #deal-with-it { 
+  animation-duration: 1s;
+  animation-name: deal;
+  position: absolute;
+  width: 80%;
+  
+  top: 23%;
+  left: 15%;
+}
+
+@keyframes deal {
+  from {
+    top: 20%;
+  }
+
+  to {
+    top: 23%;
+  }
+}
+
+ul#social-list {
+  column-gap: 20px;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  max-width: 400px;
+  padding: 0;
+}
+
+ul#social-list li {
+  margin-bottom: 15px;
+}
+
+/* @media only screen and (min-width: 381px) {
+  ul#social-list li {
+    display: inline;
+    margin-right: 30px;
+  }
+} */
+
+ul#social-list li a {
+  line-height: 32px;
+  text-decoration: none;
+}
+
+ul#social-list li a:visited {
+  color: var(--standard-text-color);
+}
+
+ul#social-list li a:hover,
+ul#social-list li a:active,
+ul#social-list li a:focus {
+  color: var(--primary-text-color);
+  font-weight: bold;
+}
+
+ul#social-list li a:hover svg *,
+ul#social-list li a:active svg *,
+ul#social-list li a:focus svg * {
+  fill: var(--primary-text-color);
+}
+
+ul#social-list li svg {
+  vertical-align: middle;
+  width: 32px;
+}
