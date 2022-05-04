@@ -59,6 +59,7 @@
 
 :root {
   --primary-text-color: dodgerblue;
+  --primary-text-color-dark: #1967b3;
   --standard-text-color: #666;
   --wide: 600px;
   --narrow: 300px;
@@ -108,8 +109,16 @@ a:visited {
   color: var(--primary-text-color);
 }
 
+a:hover {
+  color: var(--primary-text-color-dark);
+}
+
 img {
   max-width: 100%;
+}
+
+figcaption {
+  text-align: center;
 }
 
 .wrapper {
@@ -200,4 +209,63 @@ ul#social-list li a:focus svg * {
 ul#social-list li svg {
   vertical-align: middle;
   width: 32px;
+}
+
+
+ul.portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  list-style-type: none;
+  margin-bottom: 48px;
+  padding-left: 0;
+}
+
+ul.portfolio li {
+  width: 100%;
+}
+
+@media screen and (min-width: 501px) {
+  ul.portfolio {
+    flex-direction: row;
+  }
+
+  ul.portfolio li {
+    max-width: 50%;
+  }
+}
+
+ul.portfolio li a .site-preview {
+  background-position-y: 0%;
+  background-size: 100%;
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
+  height: 240px;
+  margin-bottom: 8px;
+  width: 100%;
+  
+  transition:background-position-y 8s ease;
+}
+
+ul.portfolio li:hover a .site-preview {
+  background-position-y: 100%;
+}
+
+.cms-icon::after {
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: "";
+  display: inline-block;
+  height: 24px;
+  margin-left: 15px;
+  vertical-align: middle;
+  width: 24px;
+}
+
+.cms-icon.wp-icon::after {
+  background-image: url('images/WordPress_logo.png');
+}
+
+.cms-icon.drupal-icon::after {
+  background-image: url('images/Drupal_logo.png');
 }
