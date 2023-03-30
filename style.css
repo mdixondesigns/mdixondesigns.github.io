@@ -1,60 +1,60 @@
 /* raleway-200 - latin */
 @font-face {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 200;
-  src: local(''),
-       url('fonts/raleway-v22-latin-200.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('fonts/raleway-v22-latin-200.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(""), url("fonts/raleway-v22-latin-200.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("fonts/raleway-v22-latin-200.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* raleway-regular - latin */
 @font-face {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
-  src: local(''),
-       url('fonts/raleway-v22-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('fonts/raleway-v22-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(""), url("fonts/raleway-v22-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("fonts/raleway-v22-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* raleway-700 - latin */
 @font-face {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
-  src: local(''),
-       url('fonts/raleway-v22-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('fonts/raleway-v22-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(""), url("fonts/raleway-v22-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("fonts/raleway-v22-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* lato-300 - latin */
 @font-face {
   font-display: swap;
-  font-family: 'Lato';
+  font-family: "Lato";
   font-style: normal;
   font-weight: 300;
-  src: local(''),
-       url('fonts/lato-v22-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('fonts/lato-v22-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(""), url("fonts/lato-v22-latin-300.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("fonts/lato-v22-latin-300.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* lato-regular - latin */
 @font-face {
   font-display: swap;
-  font-family: 'Lato';
+  font-family: "Lato";
   font-style: normal;
   font-weight: 400;
-  src: local(''),
-       url('fonts/lato-v22-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('fonts/lato-v22-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(""), url("fonts/lato-v22-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("fonts/lato-v22-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* lato-700 - latin */
 @font-face {
   font-display: swap;
-  font-family: 'Lato';
+  font-family: "Lato";
   font-style: normal;
   font-weight: 700;
-  src: local(''),
-       url('fonts/lato-v22-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('fonts/lato-v22-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(""), url("fonts/lato-v22-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("fonts/lato-v22-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 :root {
@@ -72,36 +72,26 @@ body {
 h1 {
   color: var(--primary-text-color);
   font-family: "Raleway", "Trebuchet MS", "Avenir", "Segoe UI", sans‑serif;
-  font-size: 3.2em;
+  font-size: 3.2rem;
   font-weight: 200;
   margin: 0;
 }
 
 h2 {
   font-family: "Raleway", "Trebuchet MS", "Avenir", "Segoe UI", sans‑serif;
-  font-size: 1.17em;
+  font-size: 1.17rem;
 }
 
 h3 {
-  font-size: .95em;
+  font-size: 0.95rem;
   font-weight: 400;
 }
 
-h3 span {
-  font-style: italic;
-  font-weight: normal;
-}
-
-h4 {
-  font-size: 1em;
-  font-weight: normal;
-  margin: 0 0 30px;
-}
-
-p, li {
+p,
+li {
   color: var(--standard-text-color);
-  font-size: .95em;
-  line-height: 1.6em;
+  font-size: 0.95rem;
+  line-height: 1.6rem;
 }
 
 a,
@@ -131,39 +121,46 @@ iframe {
   padding: 0 15px;
 }
 
+.section-bio {
+  display: flex;
+  flex-direction: column;
+}
 
+/* @media screen and (min-width: 501px) {
+  .section-bio {
+    flex-direction: row;
+  }
+} */
 
 .avatar-container {
   cursor: pointer;
-  margin: 15px 0;
+  margin-top: 15px;
   max-width: var(--narrow);
   position: relative;
 }
 
-@media only screen and (min-width: 601px) {
-
-  .section-bio {
-    display: grid;
-    gap: 15px;
-    grid-template-areas: "a a b b b b";
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-}
-
-.avatar-container #avatar {
-  border-radius: 4px;
+.avatar-container .avatar {
+  border-radius: 8px;
   transition: filter 1s;
 }
 
-.avatar-container #deal-with-it { 
+.glasses {
   animation-duration: 1s;
   animation-name: deal;
+  display: none;
   position: absolute;
   width: 80%;
-  
+
   top: 23%;
   left: 15%;
+}
+
+.deal-with-it .glasses {
+  display: block;
+}
+
+.deal-with-it .avatar {
+  filter: grayscale(100%);
 }
 
 @keyframes deal {
@@ -176,7 +173,7 @@ iframe {
   }
 }
 
-ul#social-list {
+.social-list {
   column-gap: 20px;
   display: flex;
   justify-content: flex-start;
@@ -184,37 +181,37 @@ ul#social-list {
   padding: 0;
 }
 
-ul#social-list li {
+.social-list li {
   margin-bottom: 15px;
 }
 
-ul#social-list li a {
+.social-list li a {
   line-height: 32px;
   text-decoration: none;
 }
 
-ul#social-list li a:visited {
+.social-list li a:visited {
   color: var(--standard-text-color);
 }
 
-ul#social-list li a:hover,
-ul#social-list li a:active,
-ul#social-list li a:focus {
+.social-list li a:hover,
+.social-list li a:active,
+.social-list li a:focus {
   color: var(--primary-text-color);
-  font-weight: bold;
 }
 
-ul#social-list li a:hover svg *,
-ul#social-list li a:active svg *,
-ul#social-list li a:focus svg * {
+.social-list li a:hover svg *,
+.social-list li a:active svg *,
+.social-list li a:focus svg * {
   fill: var(--primary-text-color);
 }
 
-ul#social-list li svg {
+.social-list li svg {
+  display: inline-block;
+  margin-right: 10px;
   vertical-align: middle;
   width: 32px;
 }
-
 
 ul.portfolio {
   display: flex;
@@ -247,15 +244,15 @@ ul.portfolio li a .site-preview {
   height: 240px;
   margin-bottom: 8px;
   width: 100%;
-  
-  transition:background-position-y 8s ease;
+
+  transition: background-position-y 8s ease;
 }
 
 ul.portfolio li:hover a .site-preview {
   background-position-y: 100%;
 }
 
-.cms-icon::after {
+.cms-icon .portfolio__card--title::after {
   background-size: contain;
   background-repeat: no-repeat;
   content: "";
@@ -266,10 +263,10 @@ ul.portfolio li:hover a .site-preview {
   width: 24px;
 }
 
-.cms-icon.wp-icon::after {
-  background-image: url('images/WordPress_logo.png');
+.cms-icon.wp-icon .portfolio__card--title::after {
+  background-image: url("images/WordPress_logo.png");
 }
 
-.cms-icon.drupal-icon::after {
-  background-image: url('images/Drupal_logo.png');
+.cms-icon.drupal-icon .portfolio__card--title::after {
+  background-image: url("images/Drupal_logo.png");
 }

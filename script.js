@@ -1,13 +1,9 @@
-let glasses = document.getElementById("deal-with-it");
-let avatar = document.getElementById("avatar");
+// Grab DOM elements for picture and glasses
+const avatar = document.getElementById("avatar-container");
 
-function dealwithit(){
-  
-  if(glasses.style.display == "none"){
-    glasses.style.display = "block";
-    avatar.style.filter = "grayscale(100%)"
-  } else {
-    glasses.style.display = "none";
-    avatar.style.filter = "grayscale(0%)"
-  }
+// Add event listener
+avatar.addEventListener("click", dealwithit);
+
+function dealwithit() {
+  avatar.classList.toggle("deal-with-it");
 }
