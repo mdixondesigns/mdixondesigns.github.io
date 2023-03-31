@@ -1,0 +1,112 @@
+@use "fonts";
+@use "colors" as c;
+@use "type";
+@use "social";
+@use "portfolio";
+
+$wrapper-width: 768px;
+
+body {
+  color: c.$text-color;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+}
+
+.subtitle {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 0.25rem;
+}
+
+.subtitle span {
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  background-color: c.$magnolia;
+  border: 0;
+  height: 5px;
+  margin-top: 3.25rem;
+}
+
+figcaption {
+  text-align: center;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: $wrapper-width;
+  padding: 0 15px;
+}
+
+.section-bio {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .section-bio {
+    column-gap: 40px;
+    flex-direction: row;
+  }
+}
+
+.avatar-container {
+  cursor: pointer;
+  margin-top: 15px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .avatar-container {
+    flex: 1;
+  }
+}
+
+.avatar-container .avatar {
+  border-radius: 8px;
+  transition: filter 1s;
+}
+
+.glasses {
+  animation-duration: 1s;
+  animation-name: deal;
+  display: none;
+  position: absolute;
+  width: 80%;
+
+  top: 23%;
+  left: 15%;
+}
+
+.deal-with-it .glasses {
+  display: block;
+}
+
+.deal-with-it .avatar {
+  filter: grayscale(100%);
+}
+
+@media (min-width: 768px) {
+  .bio-container {
+    flex: 2;
+  }
+}
+
+@keyframes deal {
+  from {
+    top: 20%;
+  }
+
+  to {
+    top: 23%;
+  }
+}

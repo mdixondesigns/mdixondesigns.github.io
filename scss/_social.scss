@@ -1,0 +1,26 @@
+.social-list {
+  column-gap: 20px;
+  display: flex;
+  justify-content: flex-start;
+  list-style-type: none;
+  margin: 0;
+  margin-top: 1.25rem;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .social-list {
+    margin-top: 2rem;
+  }
+}
+
+.social-list li a {
+  line-height: 32px;
+}
+
+.social-list li svg {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  width: 32px;
+}

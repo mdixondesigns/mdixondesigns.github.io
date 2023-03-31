@@ -1,0 +1,57 @@
+ul.portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  list-style-type: none;
+  margin-bottom: 48px;
+  padding-left: 0;
+}
+
+ul.portfolio li {
+  width: 100%;
+}
+
+@media screen and (min-width: 501px) {
+  ul.portfolio {
+    flex-direction: row;
+  }
+
+  ul.portfolio li {
+    max-width: 50%;
+  }
+}
+
+ul.portfolio li a .site-preview {
+  background-position-y: 0%;
+  background-size: 100%;
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
+  height: 240px;
+  margin-bottom: 8px;
+  width: 100%;
+
+  transition: background-position-y 8s ease;
+}
+
+ul.portfolio li:hover a .site-preview {
+  background-position-y: 100%;
+}
+
+.cms-icon .portfolio__card--title::after {
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: "";
+  display: inline-block;
+  height: 24px;
+  margin-left: 15px;
+  vertical-align: middle;
+  width: 24px;
+}
+
+.cms-icon.wp-icon .portfolio__card--title::after {
+  background-image: url("images/WordPress_logo.png");
+}
+
+.cms-icon.drupal-icon .portfolio__card--title::after {
+  background-image: url("images/Drupal_logo.png");
+}
