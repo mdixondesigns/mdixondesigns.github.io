@@ -2,7 +2,8 @@
 @use "colors" as c;
 @use "type";
 @use "social";
-@use "portfolio";
+@use "gallery";
+@use "projects";
 
 $wrapper-width: 768px;
 
@@ -26,11 +27,17 @@ img {
   max-width: 100%;
 }
 
+ul,
+ol {
+  padding-left: 20px;
+}
+
 hr {
   background-color: c.$magnolia;
   border: 0;
   height: 5px;
   margin-top: 3.25rem;
+  margin-bottom: 3.25rem;
 }
 
 figcaption {
@@ -44,7 +51,7 @@ iframe {
 .wrapper {
   margin: 0 auto;
   max-width: $wrapper-width;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 .section-bio {

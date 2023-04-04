@@ -1,4 +1,4 @@
-ul.portfolio {
+ul.gallery {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -7,25 +7,25 @@ ul.portfolio {
   padding-left: 0;
 }
 
-ul.portfolio li {
+ul.gallery li {
   width: 100%;
 }
 
 @media screen and (min-width: 501px) {
-  ul.portfolio {
+  ul.gallery {
     flex-direction: row;
   }
 
-  ul.portfolio li {
+  ul.gallery li {
     max-width: 50%;
   }
 }
 
-ul.portfolio li a .site-preview {
+ul.gallery li a .site-preview {
   background-position-y: 0%;
   background-size: 100%;
   border: 1px solid #eaeaea;
-  border-radius: 4px;
+  border-radius: 8px;
   height: 240px;
   margin-bottom: 8px;
   width: 100%;
@@ -33,11 +33,11 @@ ul.portfolio li a .site-preview {
   transition: background-position-y 8s ease;
 }
 
-ul.portfolio li:hover a .site-preview {
+ul.gallery li:hover a .site-preview {
   background-position-y: 100%;
 }
 
-.cms-icon .portfolio__card--title::after {
+.cms-icon .gallery__card--title::after {
   background-size: contain;
   background-repeat: no-repeat;
   content: "";
@@ -48,10 +48,10 @@ ul.portfolio li:hover a .site-preview {
   width: 24px;
 }
 
-.cms-icon.wp-icon .portfolio__card--title::after {
-  background-image: url("images/WordPress_logo.png");
+.cms-icon.wp-icon .gallery__card--title::after {
+  background-image: url("../images/WordPress_logo.png");
 }
 
-.cms-icon.drupal-icon .portfolio__card--title::after {
-  background-image: url("images/Drupal_logo.png");
+.cms-icon.drupal-icon .gallery__card--title::after {
+  background-image: url("../images/Drupal_logo.png");
 }

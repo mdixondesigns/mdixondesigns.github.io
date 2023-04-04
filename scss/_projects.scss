@@ -1,0 +1,21 @@
+@use "colors" as c;
+
+.projects {
+}
+
+.project {
+  margin-right: -20px;
+  margin-left: -20px;
+  padding: 1.2rem 20px;
+
+  &:nth-child(even) {
+    background-color: c.$magnolia;
+  }
+}
+
+@media (min-width: 768px) {
+  .project {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
