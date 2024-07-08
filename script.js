@@ -56,3 +56,18 @@ function addClassAndPrint() {
       console.error('An error occurred:', error);
   });
 }
+
+
+function printThisThree() {
+  document.body.classList.add('print-ready');
+
+  setTimeout(()=>{
+    window.print();
+  }, 100 );
+}
+
+// setTimeout(addPrintClass, 3000 );
+
+// function addPrintClass() {
+//   document.body.classList.add('print-ready');
+// }
