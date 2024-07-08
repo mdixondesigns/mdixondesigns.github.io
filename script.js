@@ -66,8 +66,8 @@ function printThisThree() {
   }, 100 );
 }
 
-// setTimeout(addPrintClass, 3000 );
+setTimeout(addPrintClass, 3000 );
 
-// function addPrintClass() {
-//   document.body.classList.add('print-ready');
-// }
+function addPrintClass() {
+  document.body.classList.add('print-ready');
+}
