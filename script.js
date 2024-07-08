@@ -61,14 +61,17 @@ function addClassAndPrint() {
 function printThisThree() {
   document.body.classList.add('print-ready');
 
+  // Force reflow
+  document.body.offsetHeight;
+
   setTimeout(()=>{
     window.print();
   }, 100 );
 }
 
-setTimeout(addPrintClass, 3000 );
+// setTimeout(addPrintClass, 3000 );
 
-function addPrintClass() {
-  alert("print ready");
-  document.body.classList.add('print-ready');
-}
+// function addPrintClass() {
+//   alert("print ready");
+//   document.body.classList.add('print-ready');
+// }
