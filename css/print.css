@@ -1,5 +1,9 @@
 @media print {
 
+  body {
+    color: blue;
+  }
+
   .print-ready {
 
     header {
