@@ -29,9 +29,30 @@ function printThis(){
 }
 
 function printThisTwo(){
-  document.body.classList.add("print-only");
+  document.body.classList.add("print-ready");
   
 	window.print();
 
-  document.body.classList.remove("print-only");
+  document.body.classList.remove("print-ready");
+}
+
+window.addEventListener('afterprint', () => {
+  document.body.classList.remove('print-ready');
+});
+
+function addClassAndPrint() {
+  return new Promise((resolve, reject) => {
+      try {
+          // Add class to the body element
+          document.body.classList.add('print-ready');
+          resolve();
+      } catch (error) {
+          reject(error);
+      }
+  }).then(() => {
+      // Call the window.print function
+      window.print();
+  }).catch((error) => {
+      console.error('An error occurred:', error);
+  });
 }

@@ -1,6 +1,6 @@
 @media print {
 
-  .print-only {
+  .print-ready {
 
     header {
         display: none !important;
