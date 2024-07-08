@@ -69,5 +69,6 @@ function printThisThree() {
 setTimeout(addPrintClass, 3000 );
 
 function addPrintClass() {
+  alert("print ready");
   document.body.classList.add('print-ready');
 }
