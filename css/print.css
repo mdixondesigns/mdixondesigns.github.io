@@ -1,0 +1,14 @@
+@media print {
+
+  .print-only {
+
+    header {
+        display: none !important;
+    }
+     
+    .avatar-container {
+      max-width: 30px;
+    }
+
+  }
+}

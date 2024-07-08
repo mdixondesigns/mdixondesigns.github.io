@@ -27,3 +27,11 @@ function printThis(){
 	WinPrint.print();
 	WinPrint.close();
 }
+
+function printThisTwo(){
+  document.body.classList.add("print-only");
+  
+	window.print();
+
+  document.body.classList.remove("print-only");
+}
