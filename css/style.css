@@ -238,6 +238,21 @@ iframe {
     flex-direction: row;
   }
 }
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 8px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.skills li {
+  background: #f5efff;
+  padding: 6px 12px;
+  border-radius: 3px;
+  border: 1px solid #cdc1ff;
+}
+
 .avatar-container {
   cursor: pointer;
   margin-top: 15px;
