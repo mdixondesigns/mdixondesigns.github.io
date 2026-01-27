@@ -87,7 +87,8 @@ a:hover {
 }
 
 .social-list {
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   display: flex;
   justify-content: flex-start;
   list-style-type: none;
@@ -194,10 +195,6 @@ body {
   margin-top: 0.25rem;
 }
 
-.subtitle span {
-  font-size: 1rem;
-}
-
 img {
   max-width: 100%;
 }
@@ -236,7 +233,8 @@ iframe {
 
 @media (min-width: 768px) {
   .section-bio {
-    column-gap: 40px;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
     flex-direction: row;
   }
 }
@@ -286,6 +284,4 @@ iframe {
   to {
     top: 23%;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
