@@ -4,12 +4,18 @@
 }
 
 .project {
-  margin-right: -20px;
-  margin-left: -20px;
-  padding: 1.2rem 20px;
+  padding: 1.2rem 0;
 
   &:nth-child(even) {
     background-color: c.$magnolia;
+    margin-right: -20px;
+    margin-left: -20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    transition:
+      border-radius 0.6s ease-in-out,
+      margin 0.6s ease-in-out,
+      padding 0.6s ease-in-out;
   }
 }
 
@@ -17,5 +23,22 @@
   .project {
     padding-top: 2rem;
     padding-bottom: 2rem;
+
+    &:nth-child(even) {
+      border-radius: 10px;
+    }
+  }
+}
+
+@media (min-width: 888px) {
+  // 768px + 120px to offset negative margin
+  .project {
+    &:nth-child(even) {
+      border-radius: 10px;
+      margin-right: -60px;
+      margin-left: -60px;
+      padding-right: 60px;
+      padding-left: 60px;
+    }
   }
 }
