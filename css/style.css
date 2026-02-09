@@ -143,6 +143,25 @@ a:hover {
     padding-left: 60px;
   }
 }
+.sites {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  display: grid;
+  gap: 1em 16px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sites li {
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  row-gap: 10px;
+}
+
 body {
   color: #272727;
   font-family: "Lato", sans-serif;
