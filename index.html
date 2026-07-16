@@ -30,23 +30,20 @@
       <div class="wrapper">
         <div class="section-bio">
           <div id="avatar-container" class="avatar-container">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/4C2_ORViuK8?si=_S9Psc5dbuMAgU4A"
-              title="YouTube video player"
-              frameborder="0"
-              allow="
-                accelerometer;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-                web-share;
-              "
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+            <button
+              class="video-facade"
+              type="button"
+              data-embed="https://www.youtube-nocookie.com/embed/4C2_ORViuK8?autoplay=1"
+              aria-label="Play video"
+            >
+              <img
+                src="https://i.ytimg.com/vi/4C2_ORViuK8/hq3.jpg"
+                alt=""
+                width="560"
+                height="315"
+              />
+              <span class="video-facade__play" aria-hidden="true"></span>
+            </button>
           </div>
 
           <div class="bio-container">
@@ -147,6 +144,7 @@
             <ul class="sites">
               <li>
                 <img
+                  loading="lazy"
                   src="images/Harvard_Medical_thumb.png"
                   alt="Screenshot of Harvard Medical School website homepage."
                 />
@@ -156,6 +154,7 @@
               </li>
               <li>
                 <img
+                  loading="lazy"
                   src="images/Simpson_thumb.png"
                   alt="Screenshot of Simpson College website homepage."
                 />
@@ -171,6 +170,7 @@
               </li>
               <li>
                 <img
+                  loading="lazy"
                   src="images/Jimmy_Fund_thumb.png"
                   alt="Screenshot of Jimmy Fund website homepage."
                 />
@@ -180,6 +180,7 @@
               </li>
               <li>
                 <img
+                  loading="lazy"
                   src="images/Harvard_Medical_Magazine_thumb.png"
                   alt="Screenshot of Harvard Medical Magazine website homepage."
                 />
@@ -189,6 +190,7 @@
               </li>
               <li>
                 <img
+                  loading="lazy"
                   src="images/Yale_Cores_thumb.png"
                   alt="Screenshot of Yale Cores Research website."
                 />
@@ -237,6 +239,7 @@
             <iframe
               width="560"
               height="315"
+              loading="lazy"
               src="https://www.youtube.com/embed/A8BJub25Ggw"
               title="YouTube video player"
               frameborder="0"
@@ -371,6 +374,21 @@
         </ul>
       </div>
     </main>
+
+    <script>
+      // Click-to-load: swap the YouTube facade for the real embed on demand.
+      document
+        .querySelector(".video-facade")
+        ?.addEventListener("click", function () {
+          const iframe = document.createElement("iframe");
+          iframe.src = this.dataset.embed;
+          iframe.title = "YouTube video player";
+          iframe.allow =
+            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+          iframe.allowFullscreen = true;
+          this.replaceWith(iframe);
+        });
+    </script>
 
     <footer>
       <div class="wrapper">
