@@ -248,22 +248,24 @@
               </li>
             </ul>
 
-            <iframe
-              width="560"
-              height="315"
-              loading="lazy"
-              src="https://www.youtube.com/embed/A8BJub25Ggw"
-              title="YouTube video player"
-              frameborder="0"
-              allow="
-                accelerometer;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-              "
-              allowfullscreen
-            ></iframe>
+            <button
+              class="facade video-facade"
+              type="button"
+              data-embed="https://www.youtube-nocookie.com/embed/A8BJub25Ggw?autoplay=1"
+              data-title="YouTube video player"
+              data-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              data-class="video-embed"
+              aria-label="Play the BSD Online Teacher Experience video"
+            >
+              <img
+                src="https://i.ytimg.com/vi/A8BJub25Ggw/maxresdefault.jpg"
+                alt=""
+                width="1280"
+                height="720"
+                loading="lazy"
+              />
+              <span class="video-facade__play" aria-hidden="true"></span>
+            </button>
 
             <ul>
               <li>Designed and implemented customer feedback pipeline</li>

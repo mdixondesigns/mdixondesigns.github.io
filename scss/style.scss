@@ -83,7 +83,8 @@ iframe {
   transition: filter 1s;
 }
 
-.avatar-container .video-facade,
+.video-facade,
+.video-embed,
 .avatar-container iframe {
   display: block;
   width: 100%;
