@@ -31,9 +31,11 @@
         <div class="section-bio">
           <div id="avatar-container" class="avatar-container">
             <button
-              class="video-facade"
+              class="facade video-facade"
               type="button"
               data-embed="https://www.youtube-nocookie.com/embed/4C2_ORViuK8?autoplay=1"
+              data-title="YouTube video player"
+              data-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               aria-label="Play video"
             >
               <img
@@ -286,36 +288,23 @@
                 500+ likes
               </li>
             </ul>
-            <p
-              class="codepen"
-              data-height="500"
-              data-default-tab="result"
-              data-slug-hash="PPEJwz"
-              data-preview="true"
-              data-user="mdixondesigns"
-              style="
-                height: 300px;
-                box-sizing: border-box;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border: 2px solid;
-                margin: 1em 0;
-                padding: 1em;
-              "
+            <button
+              class="facade pen-facade"
+              type="button"
+              data-embed="https://codepen.io/mdixondesigns/embed/PPEJwz?default-tab=result"
+              data-title="BB-8 pen by Mike Dixon on CodePen"
+              data-class="pen-embed"
+              aria-label="Run the interactive BB-8 pen on CodePen"
             >
-              <span
-                >See the Pen
-                <a href="https://codepen.io/mdixondesigns/pen/PPEJwz"> BB-8</a>
-                by Mike Dixon (<a href="https://codepen.io/mdixondesigns"
-                  >@mdixondesigns</a
-                >) on <a href="https://codepen.io">CodePen</a>.</span
-              >
-            </p>
-            <script
-              async
-              src="https://cpwebassets.codepen.io/assets/embed/ei.js"
-            ></script>
+              <img
+                src="images/bb8-pen.webp"
+                alt=""
+                width="1000"
+                height="585"
+                loading="lazy"
+              />
+              <span class="pen-facade__play" aria-hidden="true"></span>
+            </button>
           </div>
         </div>
 
@@ -386,18 +375,19 @@
     </main>
 
     <script>
-      // Click-to-load: swap the YouTube facade for the real embed on demand.
-      document
-        .querySelector(".video-facade")
-        ?.addEventListener("click", function () {
+      // Click-to-load: swap any facade for its real embed only when asked,
+      // keeping third-party JS/cookies (YouTube, CodePen) off the initial load.
+      document.querySelectorAll(".facade").forEach((el) => {
+        el.addEventListener("click", () => {
           const iframe = document.createElement("iframe");
-          iframe.src = this.dataset.embed;
-          iframe.title = "YouTube video player";
-          iframe.allow =
-            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+          iframe.src = el.dataset.embed;
+          iframe.title = el.dataset.title || "Embedded content";
           iframe.allowFullscreen = true;
-          this.replaceWith(iframe);
+          if (el.dataset.allow) iframe.allow = el.dataset.allow;
+          if (el.dataset.class) iframe.className = el.dataset.class;
+          el.replaceWith(iframe);
         });
+      });
     </script>
 
     <footer>
