@@ -1,0 +1,11 @@
+{
+  "name": "mdixondesigns.github.io",
+  "private": true,
+  "scripts": {
+    "dev": "sass --watch scss/style.scss:css/style-min.css --style=compressed",
+    "build": "sass scss/style.scss:css/style-min.css --style=compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.101.0"
+  }
+}
